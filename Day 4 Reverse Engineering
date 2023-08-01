@@ -10,3 +10,11 @@ JMP  >>>>  Jump to specified location
 JLE  >>>>  Jump if less than or equal
 JE  >>>>  Jump if equal
 
+Hostname: web.site.donovia
+IP: 192.168.28.111
+OS: unknown
+Creds: comrade::StudentWebExploitPassword
+Last Known SSH Port: unknown
+PSP: Unknown
+Malware: Unknown
+Action: Extract approved binaries under directory titled "longTermStorage".
