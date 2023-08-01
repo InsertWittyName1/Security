@@ -9,3 +9,4 @@ CMP  >>>>  Compare 2 values by subtracting them and setting the %RFLAGS register
 JMP  >>>>  Jump to specified location
 JLE  >>>>  Jump if less than or equal
 JE  >>>>  Jump if equal
+
