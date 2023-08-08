@@ -23,3 +23,5 @@ Last Known Ports: 3389
 PSP: unknown
 Malware: unknown
 Action: Test supplied credentials, if possible gain access to host. Conduct host survey and gain privileged access.
+
+lin.intranet.donovia.12356 > 192.168.28.135.32928
