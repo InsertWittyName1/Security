@@ -1,0 +1,50 @@
+sudo -l as soon as you get on box, tells me what i can run using sudo
+
+cat /etc/sudoers to show who can sudo, and what they can sudo
+
+apt-get can be used with GTFO Bins to escalate priveleges: https://gtfobins.github.io/
+
+if suid bit is set, file runs as if you are owner, sgid is the same, but for groups.
+find / -type f -perm /4000 -ls 2>/dev/null to find files with suid bit on, change 4000 to 2000 for sgid bit, and 6000 for either
+
+find . -exec <command> if suid bit for find is set, would let you run commands as root
+
+if there's a . at the beginning of $PATH, it checks current directory. We can change that using
+
+Scheme of Maneuver:
+>Jump Box
+->Pivot:192.168.28.105
+--->T1: 192.168.28.27
+--->T2: 192.168.28.12
+
+Target Section:
+
+Pivot
+Hostname: Donovian-Terminal
+IP: 192.168.28.105
+OS: Ubuntu 18.04
+Creds: comrade :: StudentReconPassword
+Last Known SSH Port: 2222
+PSP: rkhunter
+Malware: none
+Action: Perform SSH masquerade and redirect to the next target. No survey required, cohabitation with known PSP approved.
+
+T1
+Hostname: unknown
+IP: 192.168.28.27
+OS: Linux ver: Unknown
+Creds: comrade :: StudentPrivPassword
+Last Known Ports: unknown
+PSP: unknown
+Malware: unknown
+Action: Test supplied credentials, if possible gain access to host. Conduct host survey and gain privileged access.
+
+T2
+Hostname: unknown
+IP: 192.168.28.12
+OS: Linux ver: Unknown
+Creds: comrade :: StudentPrivPassword
+Last Known Ports: unknown
+PSP: unknown
+Malware: unknown
+Action: Test supplied credentials, if possible gain access to host. Conduct host survey and gain privileged access.
