@@ -36,3 +36,24 @@ siteusers 	users 	$username
 2 	RntyrfVfNER78 	$user2
 3 	Obo4GURRnccyrf 	$user3
 4 	anotherpassword4THEages 	$Lroth
+
+WALKTHROUGH::
+Scanning, ping sweep, port enums
+
+nmap -V -sT -Pn -T4 -sV <IP>
+ run scripts with this too
+check for robots.txt
+go to the inspecter, and go to network. Once you send the traffic, you can click it, then click raw, and use it.
+use view page source to look at raw output.
+Use base64, or rot13 decoding for encoded strings
+Decode and take note of everything
+check every url, no matter what
+Ping Sweep: for i in {1..254}; do (ping -c 1 <First3ofIP>.$i | grep "bytes from" &); done
+sudo -l, find perm for suid and sgid,
+For SQL Database injection, check each individual property for vulns with the "OR 1=1;" inject
+UNION SELECT table_schema,column_name,table_name FROM information_schema.columns;
+END SQL DATABASE INJECTION SEARCHES WITH A SEMICOLON
+once you get on a box, ping sweep their network again, to ensure there's nothing new
+Windows:
+net users, net groups, net localgroup, 
+look in registry, services(check description), scheduled tasks(check actions) 
